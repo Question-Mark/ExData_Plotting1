@@ -1,4 +1,4 @@
-## plot1 plot a histogram of Global_active_power from dataset household_power_consumption.txt
+## plot1 plot a line plot of Global Active Power for usage during 2/1/2007 through 2/2/2007 using weekday x-axis labels from dataset household_power_consumption.txt
 
 plot1 <- function() {
     ## get all data
@@ -11,7 +11,7 @@ plot1 <- function() {
     user_data <- subset(raw_data, raw_data$Date >= "2007-02-01" & data$Date < "2007-02-03")
     raw_data <- NULL
     
-    ## set up png device
+    ## set up png graphics device
     png(filename="plot1.png", width=504, height=504, bg="transparent", res=as.integer(120))
     
     ## set up font style, size and margins
